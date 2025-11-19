@@ -1,0 +1,141 @@
+/* Container for all quotient diagrams */
+#quotient-partitions {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+}
+
+/* One card per quotient */
+.qp-card {
+  padding: 10px 12px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 13px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qp-title {
+  margin-bottom: 6px;
+}
+
+/* Diagram layout */
+.qp-grid {
+  display: inline-block;
+}
+
+.qp-row {
+  display: flex;
+}
+
+/* Smaller cells so everything fits nicely */
+.qp-cell {
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+}
+
+/* same border trick: only draw sides once */
+.qp-cell.top {
+  border-top: 2px solid #000;
+}
+
+.qp-cell.left {
+  border-left: 2px solid #000;
+}
+
+.qp-cell.right {
+  border-right: 2px solid #000;
+}
+
+.qp-cell.bottom {
+  border-bottom: 2px solid #000;
+}
+
+/* For empty quotient */
+.qp-empty {
+  font-style: italic;
+  color: #666;
+}
+/* Container for all quotient diagrams */
+#quotient-partitions {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+}
+
+/* One card per quotient */
+.qp-card {
+  padding: 10px 12px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 13px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qp-title {
+  margin-bottom: 6px;
+}
+
+/* Wrapper so we can overlay SVG on top of the grid */
+.qp-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Diagram layout */
+.qp-grid {
+  display: inline-block;
+}
+
+.qp-row {
+  display: flex;
+}
+
+/* Smaller cells so everything fits nicely */
+.qp-cell {
+  width: 16px;
+  height: 16px;
+  box-sizing: border-box;
+}
+
+/* border-once trick */
+.qp-cell.top {
+  border-top: 2px solid #000;
+}
+.qp-cell.left {
+  border-left: 2px solid #000;
+}
+.qp-cell.right {
+  border-right: 2px solid #000;
+}
+.qp-cell.bottom {
+  border-bottom: 2px solid #000;
+}
+
+/* For empty quotient */
+.qp-empty {
+  font-style: italic;
+  color: #666;
+}
+
+/* SVG overlays (beads + diagonal) */
+.qp-overlay,
+.qp-diagonal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+

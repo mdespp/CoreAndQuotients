@@ -1,0 +1,85 @@
+/* core.css */
+
+#core-panel {
+  margin-top: 24px;
+  padding: 12px 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+.core-expression {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-size: 1.3rem;
+}
+
+/* 'Cor' text */
+.core-fun {
+  font-size: 1.5rem;
+}
+
+/* subscript wrapper so input sits as a subscript */
+.core-subscript-wrapper {
+  position: relative;
+  top: 0.4rem; /* push downward like a subscript */
+}
+
+/* parentheses and equals sign */
+.core-paren,
+.core-equals {
+  font-size: 1.4rem;
+}
+
+/* inputs styled like cute buttons */
+.core-input {
+  border: 2px solid #333;
+  border-radius: 999px;
+  padding: 4px 10px;
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 0.95rem;
+  background-color: #fff;
+  outline: none;
+  min-width: 2.2rem;
+}
+
+.core-input-small {
+  width: 2.5rem;
+  text-align: center;
+}
+
+.core-input-long {
+  min-width: 12rem;
+}
+
+.core-input::placeholder {
+  color: #999;
+  font-size: 0.8rem;
+}
+
+.core-input:focus {
+  box-shadow: 0 0 0 2px rgba(131, 88, 255, 0.4);
+  border-color: #4a3fbf;
+}
+.core-lambda-symbol {
+  font-size: 1.6rem;
+  padding: 0 6px;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  #core-panel {
+    margin-top: 16px;
+    padding: 10px 14px;
+  }
+
+  .core-expression {
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  .core-input-long {
+    min-width: 9rem;
+  }
+}

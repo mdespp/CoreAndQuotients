@@ -1,0 +1,77 @@
+/* coreAbacus.css */
+
+#core-abacus {
+  margin-top: 20px;
+  padding: 14px 20px 18px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  display: inline-block;
+  max-width: 90vw;
+}
+
+.abacus-title {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.abacus-wrap {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.abacus-row {
+  display: flex;
+  gap: 4px;
+}
+
+.abacus-row-above {
+  /* normal left→right */
+}
+
+.abacus-row-below {
+  flex-direction: row-reverse; /* to match \"filled right→left\" layout */
+}
+
+.abacus-bead {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #333;
+  box-sizing: border-box;
+}
+
+/* 1's = filled bead, 0's = empty */
+.abacus-bead-one {
+  background: #333;
+}
+
+.abacus-bead-zero {
+  background: #ffffff;
+}
+
+/* fence row */
+.abacus-fence-row {
+  display: flex;
+  gap: 4px;
+  margin: 4px 0 2px;
+}
+
+.abacus-fence-seg {
+  width: 18px;
+  height: 4px;
+  border-radius: 999px;
+  background: #333;
+}
+
+@media (max-width: 480px) {
+  .abacus-bead,
+  .abacus-fence-seg {
+    width: 14px;
+    height: 14px;
+  }
+  .abacus-fence-seg {
+    height: 3px;
+  }
+}

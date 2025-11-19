@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cores and Quotients of Partitions</title>
+
+  <!-- Cute font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="partition.css">
+  <link rel="stylesheet" href="core.css">
+  <link rel="stylesheet" href="characteristic.css">
+  <link rel="stylesheet" href="coreAbacus.css">
+  <link rel="stylesheet" href="quotient.css">
+  <link rel="stylesheet" href="corePartition.css">
+  <!-- in <head> with your other CSS -->
+<link rel="stylesheet" href="quotientPartitions.css">
+<!-- in <head> with your other CSS -->
+<link rel="stylesheet" href="quotientAbacus.css">
+<link rel="stylesheet" href="forbinusFence.css">
+
+
+
+</head>
+
+<body>
+  <h1>CORES AND QUOTIENTS OF PARTITIONS</h1>
+
+  <!-- Cor_m(λ) = core panel -->
+  <div id="core-panel">
+    <div class="core-expression">
+      <span class="core-fun">Cor</span>
+
+      <span class="core-subscript-wrapper">
+        <input id="core-m"
+               class="core-input core-input-small"
+               type="text"
+               placeholder="m">
+      </span>
+
+      <span class="core-paren">(</span>
+      <span class="core-lambda-symbol">λ</span>
+      <span class="core-paren">)</span>
+
+      <span class="core-equals">=</span>
+
+      <input id="core-result"
+             class="core-input core-input-long"
+             type="text"
+             placeholder="core partition">
+    </div>
+  </div>
+
+    <div id="core-partition"></div>
+
+  <!-- Abacus display -->
+  <div id="core-abacus"></div>
+
+  <!-- Characteristic vector display -->
+  <div id="characteristic-display"></div>
+
+    <!-- Quo_m(λ) = quotient hooks panel (styled like Cor) -->
+  <!-- Quo_m(λ) = quotient hooks panel (you already have this) -->
+  <div id="quotient-panel">
+    <div class="core-expression">
+      <span class="core-fun">Quo</span>
+
+      <span class="core-subscript-wrapper">
+        <span id="quot-m-display" class="core-m-display">m</span>
+      </span>
+
+      <span class="core-paren">(</span>
+      <span class="core-lambda-symbol">λ</span>
+      <span class="core-paren">)</span>
+
+      <span class="core-equals">=</span>
+
+      <input id="quot-hooks"
+             class="core-input core-input-long"
+             type="text"
+             placeholder="hooks e.g. 2,1; 1; (); 1; 2">
+    </div>
+    <div id="quotient-error" class="quotient-error"></div>
+  </div>
+<div id="quotient-partitions"></div>
+<div id="quotient-abacus"></div>
+<div id="characteristic-quotient-abacus"></div>
+<div id="forbinus-fence"></div>
+
+  <div id="final-partition"></div>
+  
+
+  <!-- Partition diagram (optional, still here for later use) -->
+  <div id="partition-display"></div>
+
+  <!-- JavaScript (IMPORTANT ORDER!) -->
+<script src="partition.js"></script>
+<script src="characteristic.js"></script> <!-- optional; not needed for ProgramJS -->
+<script src="program.js"></script>        <!-- defines ProgramCoreQuotient -->
+<script src="corePartition.js"></script> 
+<script src="coreAbacus.js"></script>
+<script src="core.js"></script>
+<script src="quotientPartitions.js"></script>
+<!-- near the bottom, after characteristic.js and before quotient.js is safe -->
+<script src="quotientAbacus.js"></script>
+<script src="characteristicQuotient.js"></script>
+<script src="forbinusFence.js"></script>
+<script src="quotient.js"></script>
+      <!-- uses ProgramCoreQuotient -->
+
+</body>
+</html>

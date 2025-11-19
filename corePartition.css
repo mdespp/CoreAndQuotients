@@ -1,0 +1,68 @@
+/* Core partition card under Cor line */
+#core-partition {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.core-partition-card {
+  padding: 14px 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: inline-block;
+}
+
+/* wrapper so we can overlay the red diagonal */
+.core-partition-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* reuse your row layout */
+.core-partition-grid {
+  display: inline-block;
+}
+
+.core-partition-row {
+  display: flex;
+}
+
+/* we reuse the same cell styling logic as the big partition,
+   but keep a separate class so you can tweak later */
+.core-partition-cell {
+  width: 28px;
+  height: 28px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* grid borders: same trick as earlier (no double-thick lines) */
+.core-partition-cell.top {
+  border-top: 2px solid #000;
+}
+.core-partition-cell.left {
+  border-left: 2px solid #000;
+}
+.core-partition-cell.right {
+  border-right: 2px solid #000;
+}
+.core-partition-cell.bottom {
+  border-bottom: 2px solid #000;
+}
+
+.core-partition-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.core-partition-diagonal,
+.core-partition-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+

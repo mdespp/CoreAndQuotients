@@ -1,0 +1,62 @@
+/* quotient.css */
+
+/* Card for the quotient line */
+#quotient-panel {
+  margin-top: 18px;
+  padding: 12px 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+  display: inline-block;
+}
+
+/* reuse .core-expression, .core-input from core.css */
+
+.core-m-display {
+  border: 2px solid #333;
+  border-radius: 999px;
+  padding: 4px 10px;
+  min-width: 2.5rem;
+  text-align: center;
+  background: #fff;
+  font-family: 'Fredoka One', sans-serif;
+  font-size: 0.95rem;
+}
+
+/* error text under the line */
+.quotient-error {
+  margin-top: 6px;
+  font-size: 0.9rem;
+  color: #b03030;
+  white-space: pre-wrap;
+}
+
+/* pretty highlight when valid */
+#quotient-panel.quotient-valid {
+  box-shadow: 0 0 0 2px rgba(74,63,191,0.45);
+}
+
+@media (max-width: 480px) {
+  #quotient-panel {
+    padding: 10px 14px;
+  }
+}
+
+.final-partition-card {
+  margin-top: 18px;
+  padding: 12px 18px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  display: inline-block;
+}
+
+.final-partition-title {
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.final-partition-body {
+  font-size: 1rem;
+  font-weight: 600;
+}

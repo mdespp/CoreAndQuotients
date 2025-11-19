@@ -1,0 +1,50 @@
+/* characteristic.css */
+
+#characteristic-display {
+  margin-top: 20px;
+  padding: 14px 20px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  display: inline-block;
+  max-width: 90vw;
+}
+
+.char-title {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.char-vector-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.char-cell {
+  min-width: 32px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  text-align: center;
+  border: 2px solid #333;
+  background: #ffffff;
+  font-size: 0.95rem;
+}
+
+/* positive / negative coloring */
+.char-pos {
+  background: #d9ffe4;
+  border-color: #2f9150;
+}
+
+.char-neg {
+  background: #ffe1ee;
+  border-color: #b03060;
+}
+
+/* error text */
+.char-error {
+  color: #b03030;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+}
